@@ -201,4 +201,8 @@ describe('Flatten and sort an array', () => {
   it('Case 2', () => {
     expect(flattenAndSort([[1, 3, 5], [100], [2, 4, 6]])).deep.eq([1, 2, 3, 4, 5, 6, 100])
   })
+
+  it('Case 3', () => {
+    expect(flattenAndSort([[1], [2], [3],[5],[4]])).deep.eq([1, 2, 3, 4, 5])
+  })
 })
