@@ -1,5 +1,4 @@
 const {solve,removeDuplicateWords,largestPairSum,evenNumbers,smallEnough} = require('../kata7')
-// const assert = require('assert')
 const expect = require('chai').expect
 
 
@@ -57,6 +56,7 @@ describe('Largest pair sum in array',()=>{
 })
 
 describe('Even numbers in an array',()=>{
+    //https://www.codewars.com/kata/5a431c0de1ce0ec33a00000c
     it('Case 1',()=>{
         expect(evenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9], 3)).deep.eq([4, 6, 8])
     })
