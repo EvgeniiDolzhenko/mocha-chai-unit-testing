@@ -1,4 +1,4 @@
-const {solve,removeDuplicateWords,largestPairSum,evenNumbers,smallEnough} = require('../kata7')
+const {greet,solve,removeDuplicateWords,largestPairSum,evenNumbers,smallEnough,fizzbuzz7} = require('../kata7')
 const expect = require('chai').expect
 
 
@@ -86,5 +86,26 @@ describe('Small enough? - Beginner',()=>{
 
     it('Case 4',()=>{
         expect(smallEnough([80, 117, 115, 104, 45, 85, 112, 115], 120)).eq(true)
+    })
+})
+
+describe('fizzbuzz7',()=>{
+    //https://www.codewars.com/kata/5300901726d12b80e8000498/train/javascript
+    it('Case 1',()=>{
+        expect(fizzbuzz7(3)).deep.eq([1, 2, "Fizz"])
+    })
+
+    it('Case 2',()=>{
+        expect(fizzbuzz7(10)).deep.eq([1,2,'Fizz',4,'Buzz','Fizz',7,8,'Fizz','Buzz'])
+    })
+})
+
+describe('Greet Me',()=>{
+    it('Case 1',()=>{
+        expect(greet('riley')).eq('Hello Riley!')
+    })
+
+    it('Case 2',()=>{
+        expect(greet('JACK')).eq('Hello Jack!')
     })
 })

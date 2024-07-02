@@ -43,4 +43,35 @@ function smallEnough(a, limit){
   return true
 }
 
-module.exports = {solve, removeDuplicateWords,largestPairSum,evenNumbers,smallEnough} 
+function fizzbuzz7(n){
+  let res = []
+  let newArray = []
+  for(let i =1; i<=n; i++){
+    res.push(i)
+  }
+  
+  for(let k = 0; k<res.length; k++){
+    if(res[k] % 5 === 0 && res[k] % 3 === 0 ) {
+      newArray.push('FizzBuzz') }
+    else if(res[k] % 5 === 0){
+      newArray.push('Buzz')
+    } else if(res[k] % 3 === 0 ){
+      newArray.push('Fizz')
+    } else {
+      newArray.push(res[k])
+    }
+  }
+  
+  return newArray
+}
+
+var greet = function(name) {
+  let res =''
+  for(let i = 1; i<name.length;i++){
+    res = res + name[i].toLowerCase()
+  }
+  return 'Hello '+ name[0].toUpperCase()+res+'!'
+
+};
+
+module.exports = {greet,solve, removeDuplicateWords,largestPairSum,evenNumbers,smallEnough,fizzbuzz7} 
