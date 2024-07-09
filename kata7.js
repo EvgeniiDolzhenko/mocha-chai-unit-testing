@@ -74,4 +74,22 @@ var greet = function(name) {
 
 };
 
-module.exports = {greet,solve, removeDuplicateWords,largestPairSum,evenNumbers,smallEnough,fizzbuzz7} 
+function vowelIndices(w){
+  let vowels = ['a','e','i','o','u','y']
+  let word = w.toLowerCase().split('')
+  const res = []
+  for(let i = 0; i < word.length; i++){
+    for(let k = 0; k <vowels.length; k++){
+      if(word[i] === vowels[k] ) res.push(i+1)
+    }
+  }
+  return res
+}
+
+function getEvenNumbers(a){
+  const result = a.filter((n)=> n%2===0)
+  return result
+}
+
+
+module.exports = {greet,solve, removeDuplicateWords,largestPairSum,evenNumbers,smallEnough,fizzbuzz7,vowelIndices, getEvenNumbers} 

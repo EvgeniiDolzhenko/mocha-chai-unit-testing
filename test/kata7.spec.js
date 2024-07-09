@@ -1,6 +1,6 @@
-const {greet,solve,removeDuplicateWords,largestPairSum,evenNumbers,smallEnough,fizzbuzz7} = require('../kata7')
+const {greet,solve,removeDuplicateWords,largestPairSum,
+    evenNumbers,smallEnough,fizzbuzz7,vowelIndices, getEvenNumbers} = require('../kata7')
 const expect = require('chai').expect
-
 
 describe('Fix string case',()=>{
 //https://www.codewars.com/kata/5b180e9fedaa564a7000009a/train/javascript
@@ -101,6 +101,7 @@ describe('fizzbuzz7',()=>{
 })
 
 describe('Greet Me',()=>{
+    //https://www.codewars.com/kata/535474308bb336c9980006f2/train/javascript
     it('Case 1',()=>{
         expect(greet('riley')).eq('Hello Riley!')
     })
@@ -109,3 +110,49 @@ describe('Greet Me',()=>{
         expect(greet('JACK')).eq('Hello Jack!')
     })
 })
+
+describe('Find the vowels',()=>{
+//https://www.codewars.com/kata/5680781b6b7c2be860000036/train/javascript
+it('Case 1',()=>{
+    expect(vowelIndices('mmm')).deep.eq([])
+})
+
+it('Case 2',()=>{
+    expect(vowelIndices('apple')).deep.eq([1,5])
+})
+
+it('Case 3',()=>{
+    expect(vowelIndices('super')).deep.eq([2,4])
+})
+
+it('Case 4',()=>{
+    expect(vowelIndices('orange')).deep.eq([1,3,6])
+})
+
+it('Case 5',()=>{
+    expect(vowelIndices('supercalifragilisticexpialidocious')).deep.eq([2,4,7,9,12,14,16,19,21,24,25,27,29,31,32,33])
+})
+
+})
+
+describe('JavaScript Array Filter',()=>{
+    //https://www.codewars.com/kata/514a6336889283a3d2000001/train/javascript
+    it('Case 1',()=>{
+        expect(getEvenNumbers([1,2,3,6,8,10])).deep.eq([2,6,8,10])
+    })
+    
+    it('Case 2',()=>{
+        expect(getEvenNumbers([1,2])).deep.eq([2])
+    })
+    
+    it('Case 3',()=>{
+        expect(getEvenNumbers([12,14,15])).deep.eq([12,14])
+    })
+    
+    it('Case 4',()=>{
+        expect(getEvenNumbers([13,15])).deep.eq([])
+    })
+    
+    })
+
+
