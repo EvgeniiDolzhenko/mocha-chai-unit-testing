@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "prettier": "prettier --write \"test/**/*.js\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^10.5.1"
+    "mocha": "^10.5.1",
+    "prettier": "^3.3.2"
   },
   "dependencies": {
     "chai": "^4.4.1"

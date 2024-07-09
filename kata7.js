@@ -91,5 +91,20 @@ function getEvenNumbers(a){
   return result
 }
 
+function inAscOrder(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+      if (arr[i] > arr[i + 1]) {
+          return false;
+      }
+  }
+  return true;
+}
 
-module.exports = {greet,solve, removeDuplicateWords,largestPairSum,evenNumbers,smallEnough,fizzbuzz7,vowelIndices, getEvenNumbers} 
+function flattenAndSort(a) {
+  return a.flat().sort((a,b)=>a-b)
+}
+
+
+
+
+module.exports = {inAscOrder,flattenAndSort,greet,solve, removeDuplicateWords,largestPairSum,evenNumbers,smallEnough,fizzbuzz7,vowelIndices, getEvenNumbers} 
