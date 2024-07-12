@@ -104,7 +104,12 @@ function flattenAndSort(a) {
   return a.flat().sort((a,b)=>a-b)
 }
 
+function reverseNumber(n) {
+  let str = n.toString().split('').reverse().join('')
+  if(n>0) return +str
+  if(n==0) return 0
+  if(n<0) return -Number(str.slice(0, -1))
+}
 
 
-
-module.exports = {inAscOrder,flattenAndSort,greet,solve, removeDuplicateWords,largestPairSum,evenNumbers,smallEnough,fizzbuzz7,vowelIndices, getEvenNumbers} 
+module.exports = {inAscOrder,reverseNumber,flattenAndSort,greet,solve, removeDuplicateWords,largestPairSum,evenNumbers,smallEnough,fizzbuzz7,vowelIndices, getEvenNumbers} 
