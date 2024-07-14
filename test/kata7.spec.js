@@ -11,7 +11,7 @@ const {
   vowelIndices,
   getEvenNumbers,
   reverseNumber,
-  solution
+  solution,
 } = require('../kata7')
 const expect = require('chai').expect
 
