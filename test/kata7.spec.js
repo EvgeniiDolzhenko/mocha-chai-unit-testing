@@ -11,6 +11,7 @@ const {
   vowelIndices,
   getEvenNumbers,
   reverseNumber,
+  solution
 } = require('../kata7')
 const expect = require('chai').expect
 
@@ -221,5 +222,21 @@ describe('Reverse a Number', () => {
 
   it('Case 3', () => {
     expect(reverseNumber(0)).eq(0)
+  })
+})
+
+describe('String ends with?', () => {
+  //https://www.codewars.com/kata/51f2d1cafc9c0f745c00037d/train/javascript
+
+  it('Case 1', () => {
+    expect(solution('abcde', 'cde')).eq(true)
+  })
+
+  it('Case 2', () => {
+    expect(solution('abcde', 'abc')).eq(false)
+  })
+
+  it('Case 3', () => {
+    expect(solution('abcde', '')).eq(true)
   })
 })

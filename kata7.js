@@ -111,5 +111,11 @@ function reverseNumber(n) {
   if(n<0) return -Number(str.slice(0, -1))
 }
 
+function solution(str, ending){
+  let slice = str.slice(-(ending.length))
+  if(ending === slice || ending.length === 0 ) return true
+  return false
+}
 
-module.exports = {inAscOrder,reverseNumber,flattenAndSort,greet,solve, removeDuplicateWords,largestPairSum,evenNumbers,smallEnough,fizzbuzz7,vowelIndices, getEvenNumbers} 
+
+module.exports = {inAscOrder,solution,reverseNumber,flattenAndSort,greet,solve, removeDuplicateWords,largestPairSum,evenNumbers,smallEnough,fizzbuzz7,vowelIndices, getEvenNumbers} 
