@@ -11,4 +11,24 @@ function likes(names) {
     }
   } 
 
-  module.exports = {likes}
+  function toCamelCase(str){
+    let result = '';
+    let capitalizeNext = false;
+  
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] === '-' || str[i] === '_') {
+        capitalizeNext = true;
+      } else {
+        if (capitalizeNext) {
+          result += str[i].toUpperCase();
+          capitalizeNext = false;
+        } else {
+          result += str[i];
+        }
+      }
+    }
+  
+    return result;
+  }
+
+  module.exports = {likes,toCamelCase}

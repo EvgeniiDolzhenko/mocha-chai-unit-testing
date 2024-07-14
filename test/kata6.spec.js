@@ -1,4 +1,4 @@
-const {likes} = require('../kata6')
+const {likes, toCamelCase} = require('../kata6')
 const expect = require('chai').expect
 
 describe('likes', function () {
@@ -33,5 +33,48 @@ describe('likes', function () {
     expect(likes(['Alex', 'Jacob', 'Mark', 'Max', 'Paul', 'Jane'])).to.equal(
       'Alex, Jacob and 4 others like this'
     )
+  })
+})
+
+describe('Convert string to camel case', function () {
+  //https://www.codewars.com/kata/517abf86da9663f1d2000003/train/javascript
+  it('should convert snake_case to camelCase', function () {
+    expect(toCamelCase('hello_world')).to.equal('helloWorld')
+  })
+
+  it('should convert kebab-case to camelCase', function () {
+    expect(toCamelCase('hello-world')).to.equal('helloWorld')
+  })
+
+  it('should handle strings with multiple separators', function () {
+    expect(toCamelCase('my-variable_name')).to.equal('myVariableName')
+  })
+
+  it('should return the same string if there are no separators', function () {
+    expect(toCamelCase('hello')).to.equal('hello')
+  })
+
+  it('should handle strings starting with a separator', function () {
+    expect(toCamelCase('_hello_world')).to.equal('HelloWorld')
+  })
+
+  it('should handle strings ending with a separator', function () {
+    expect(toCamelCase('hello_world_')).to.equal('helloWorld')
+  })
+
+  it('should handle strings with consecutive separators', function () {
+    expect(toCamelCase('hello__world--again')).to.equal('helloWorldAgain')
+  })
+
+  it('should handle an empty string', function () {
+    expect(toCamelCase('')).to.equal('')
+  })
+
+  it('should handle a single separator', function () {
+    expect(toCamelCase('-')).to.equal('')
+  })
+
+  it('should handle a string with only separators', function () {
+    expect(toCamelCase('---')).to.equal('')
   })
 })
