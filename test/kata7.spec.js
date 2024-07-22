@@ -244,44 +244,44 @@ describe('String ends with?', () => {
 
 describe('toJadenCase', () => {
   it('should capitalize the first letter of each word', () => {
-      const input = "How can mirrors be real if our eyes aren't real";
-      const expectedOutput = "How Can Mirrors Be Real If Our Eyes Aren't Real";
-      expect(toJadenCase(input)).to.equal(expectedOutput);
-  });
+    const input = "How can mirrors be real if our eyes aren't real"
+    const expectedOutput = "How Can Mirrors Be Real If Our Eyes Aren't Real"
+    expect(toJadenCase(input)).to.equal(expectedOutput)
+  })
 
   it('should handle an empty string', () => {
-      const input = "";
-      const expectedOutput = "";
-      expect(toJadenCase(input)).to.equal(expectedOutput);
-  });
+    const input = ''
+    const expectedOutput = ''
+    expect(toJadenCase(input)).to.equal(expectedOutput)
+  })
 
   it('should handle a single word', () => {
-      const input = "hello";
-      const expectedOutput = "Hello";
-      expect(toJadenCase(input)).to.equal(expectedOutput);
-  });
+    const input = 'hello'
+    const expectedOutput = 'Hello'
+    expect(toJadenCase(input)).to.equal(expectedOutput)
+  })
 
   it('should handle multiple spaces between words', () => {
-      const input = "hello   world";
-      const expectedOutput = "Hello   World";
-      expect(toJadenCase(input)).to.equal(expectedOutput);
-  });
+    const input = 'hello   world'
+    const expectedOutput = 'Hello   World'
+    expect(toJadenCase(input)).to.equal(expectedOutput)
+  })
 
   it('should handle words with punctuation', () => {
-      const input = "hello, world!";
-      const expectedOutput = "Hello, World!";
-      expect(toJadenCase(input)).to.equal(expectedOutput);
-  });
+    const input = 'hello, world!'
+    const expectedOutput = 'Hello, World!'
+    expect(toJadenCase(input)).to.equal(expectedOutput)
+  })
 
   it('should handle mixed case input', () => {
-      const input = "hOw cAn mIrRoRs bE ReAl iF oUr eYeS aReN't rEaL";
-      const expectedOutput = "How Can Mirrors Be Real If Our Eyes Aren't Real";
-      expect(toJadenCase(input)).to.equal(expectedOutput);
-  });
+    const input = "hOw cAn mIrRoRs bE ReAl iF oUr eYeS aReN't rEaL"
+    const expectedOutput = "How Can Mirrors Be Real If Our Eyes Aren't Real"
+    expect(toJadenCase(input)).to.equal(expectedOutput)
+  })
 
   it('should not change already capitalized words', () => {
-      const input = "Hello World";
-      const expectedOutput = "Hello World";
-      expect(toJadenCase(input)).to.equal(expectedOutput);
-  });
-});
+    const input = 'Hello World'
+    const expectedOutput = 'Hello World'
+    expect(toJadenCase(input)).to.equal(expectedOutput)
+  })
+})
