@@ -117,5 +117,11 @@ function solution(str, ending){
   return false
 }
 
+function toJadenCase(str) {
+  return str.toLowerCase().split(' ')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
+}
 
-module.exports = {inAscOrder,solution,reverseNumber,flattenAndSort,greet,solve, removeDuplicateWords,largestPairSum,evenNumbers,smallEnough,fizzbuzz7,vowelIndices, getEvenNumbers} 
+
+module.exports = {inAscOrder,toJadenCase,solution,reverseNumber,flattenAndSort,greet,solve, removeDuplicateWords,largestPairSum,evenNumbers,smallEnough,fizzbuzz7,vowelIndices, getEvenNumbers} 
