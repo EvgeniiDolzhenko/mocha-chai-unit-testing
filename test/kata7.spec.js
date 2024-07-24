@@ -13,6 +13,7 @@ const {
   reverseNumber,
   solution,
   toJadenCase,
+  checkThreeAndTwo,
 } = require('../kata7')
 const expect = require('chai').expect
 
@@ -283,5 +284,40 @@ describe('toJadenCase', () => {
     const input = 'Hello World'
     const expectedOutput = 'Hello World'
     expect(toJadenCase(input)).to.equal(expectedOutput)
+  })
+})
+
+describe('checkThreeAndTwo', () => {
+  //https://www.codewars.com/kata/5a9e86705ee396d6be000091/train/javascript
+  it('should return true for [a, a, a, b, b]', () => {
+    expect(checkThreeAndTwo(['a', 'a', 'a', 'b', 'b'])).to.be.true
+  })
+
+  it('should return true for [b, b, b, c, c]', () => {
+    expect(checkThreeAndTwo(['b', 'b', 'b', 'c', 'c'])).to.be.true
+  })
+
+  it('should return true for [c, c, c, a, a]', () => {
+    expect(checkThreeAndTwo(['c', 'c', 'c', 'a', 'a'])).to.be.true
+  })
+
+  it('should return true for [a, a, b, b, b]', () => {
+    expect(checkThreeAndTwo(['a', 'a', 'b', 'b', 'b'])).to.be.true
+  })
+
+  it('should return false for [a, a, a, b, c]', () => {
+    expect(checkThreeAndTwo(['a', 'a', 'a', 'b', 'c'])).to.be.false
+  })
+
+  it('should return false for [a, a, a, a, b]', () => {
+    expect(checkThreeAndTwo(['a', 'a', 'a', 'a', 'b'])).to.be.false
+  })
+
+  it('should return false for an empty array', () => {
+    expect(checkThreeAndTwo([])).to.be.false
+  })
+
+  it('should return false for [a, b, c, a, b]', () => {
+    expect(checkThreeAndTwo(['a', 'b', 'c', 'a', 'b'])).to.be.false
   })
 })
